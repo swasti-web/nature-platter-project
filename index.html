@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/logo-mobile-Photoroom.png" type="image/x-icon"/>
+
+    <!-- daisyui & tailwind cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/4ba8467426.js" crossorigin="anonymous"></script>
+    <title>Fresh Market</title>
+
+    <style>
+      .sora {
+        font-family: "Sora", serif;
+      }
+      @keyframes fadeInScale {
+        0% {
+          opacity: 0.5;
+          transform: scale(0.9);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        100% {
+          opacity: 0.5;
+          transform: scale(0.9);
+        }
+      }
+      .animate-fadeInScale {
+        animation: fadeInScale 3s ease-in-out infinite;
+      }
+      /* image */
+      @keyframes imageScale {
+        0% {
+            transform: scale(0.8);
+            opacity: 0;
+          }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+      .animate-imageScale {
+        animation: imageScale 1s ease-in-out forwards;
+      }
+    </style>
+  </head>
+<body class="sora">
+    <!-- header start -->
+    <header class="bg-gradient-to-b from-[#FFFFFF] to-[#EFEBE3]">
+      <!-- Nav Bar for desktop-->
+      <nav
+        class="hidden md:flex max-w-7xl mx-auto justify-between items-center py-6"
+      >
+        <div class="w-[120px] hover:scale-105 duration-300">
+          <img src="images/logo-header.png" alt="" />
+        </div>
+
+        <ul class="flex gap-8">
+          <li>
+            <a class="text-[#111111] hover:text-[#179800] font-[400]" href="#"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a class="text-[#111111] hover:text-[#179800] font-[400]" href="#"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a class="text-[#111111] hover:text-[#179800] font-[400]" href="#"
+              >Contact us</a
+            >
+          </li>
+        </ul>
+
+        <div class="flex gap-4 items-center">
+          <i
+            class="fa-solid fa-magnifying-glass text-[#111111] hover:text-[#179800] text-xl"
+          ></i>
+          <i
+            class="fa-solid fa-cart-shopping text-[#111111] hover:text-[#179800] text-xl"
+          ></i>
+          <button
+            class="border-[#179800] border-[1.5px] py-[5px] px-[25px] rounded-md font-[400] text-[#111111] hover:text-[#179800] hover:bg-white"
+          >
+            Login
+          </button>
+          <button
+            class="border-[#179800] border-[1.5px] py-[5px] px-[25px] rounded-md bg-[#179800] font-[400] hover:bg-white text-white hover:text-[#179800]"
+          >
+            Register
+          </button>
+        </div>
+      </nav>
+
+      <!-- Nav bar for mobile -->
+      <nav
+        class="max-w-[94%] mx-auto py-6 flex md:hidden justify-between items-center"
+      >
+        <img class="w-[50px]" src="images/logo-mobile.png" alt="" />
+        <i class="fa-solid fa-bars text-3xl text-[#179800]"></i>
+      </nav>
+      <hr class="border border-[#179800] md:hidden" />
+
+      <!-- Hero part -->
+      <div
+        class="flex flex-col items-center md:w-[70%] mx-auto mt-[70px] gap-[32px] overflow-hidden"
+      >
+        <h2
+          class="text-center text-4xl md:text-5xl font-[600] text-[#111111] opacity-0 animate-fadeInScale delay-300"
+        >
+          Freshness
+          <span class="text-[#179800] animate-textFadeIn"
+            >You Can <br />
+            Count
+          </span>
+          On, Prices You'll Love!
+        </h2>
+        <p class="text-center w-[94%] md:w-[50%] mx-auto text-[#414141]">
+          Shop your daily essentials at unbeatable prices. From fresh produce to
+          pantry staples, we’ve got you covered every day!
+        </p>
+        <img
+          class="hover:scale-105 duration-500 animate-imageScale"
+          src="images/hero-vegetables.png"
+          alt=""
+        />
+      </div>
+    </header>
+     <!-- header end -->
+</body>
+</html>
